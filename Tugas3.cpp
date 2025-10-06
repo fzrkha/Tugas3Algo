@@ -4,7 +4,7 @@
 
 int main(){
 	int n = -1;
-	int pilih, front = 0, rear = -1, x, view;
+	int pilih, front = 0, rear = -1, x;
 	int l[1000];
 	bool menu = true;
 	
@@ -37,7 +37,7 @@ int main(){
 					if(rear!=n-1){
 						bool repeat = true;
 						char cont;
-						while(repeat && rear!=n-1){
+						while(repeat && rear<n-1){
 							rear++;
 							printf("Masukkan nilai yang akan di-insert pada baris ke-%i: ",rear); scanf("%i", &x);
 							l[rear] = x;
@@ -46,7 +46,6 @@ int main(){
 								repeat = false;
 							}
 						}
-						printf("Antrian telah penuh.");
 						repeat = false;
 					}else{
 						printf("Antrian telah penuh, tidak dapat menambahkan lagi.");
@@ -77,6 +76,21 @@ int main(){
 					} else {
 						printf("Tidak ada antrian yang dapat dihapus.");
 					}
+				}else if(pilih==4){
+					int view = 0, jum = 0;
+					if(front<rear+1){
+						while(view<n){
+							if(view>=front && view<=rear){
+								printf("Antrian ke-%i: %i\n",view,l[view]);
+								jum++;
+							}
+							view++;
+						}
+						printf("Total antrian yang terisi: ",jum);
+					}
+				}else if(pilih==5){
+					printf("Sampai jumpa!");
+					menu = false;
 				}
 			}else{
 				printf("Masukkan dulu panjang antrian.");

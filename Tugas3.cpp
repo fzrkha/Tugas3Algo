@@ -87,6 +87,8 @@ int main(){
 							view++;
 						}
 						printf("Total antrian yang terisi: ",jum);
+					}else{
+						print("Antrian belum terisi.");
 					}
 				}else if(pilih==5){
 					printf("Sampai jumpa!");

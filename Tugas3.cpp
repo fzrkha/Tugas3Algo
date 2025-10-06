@@ -1,3 +1,8 @@
+//Fansoli Ibnu Mustafa 2411500362
+//Puteri Jasmine Salsabila 2411501121
+//Gita Shafira 2411502178
+//Muhammad Razin Haidar Karim 2411500016
+
 #include <iostream>
 #include <stdio.h>
 #include <stdbool.h>

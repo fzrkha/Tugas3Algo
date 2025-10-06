@@ -108,7 +108,7 @@ int main(){
 		printf("=========================================\n");
 		if(pilih==1){
 			panjang();
-		} else if(pilih > 1 && pilih < 6){
+		}else if(pilih > 1 && pilih < 5){
 			if(n>0){
 				if(pilih == 2){
 					tambah();
@@ -116,13 +116,13 @@ int main(){
 					hapus();
 				}else if(pilih==4){
 					lihat();
-				}else if(pilih==5){
-					keluar();
 				}
 			}else{
 				printf("Masukkan dulu panjang antrian.");
 			}
-		}else {
+		}else if(pilih==5){
+			keluar();
+		}else{
 			printf("Angka yang anda input tidak terdaftar di dalam Menu. Harap coba kembali.\n");
 		}
 	}
